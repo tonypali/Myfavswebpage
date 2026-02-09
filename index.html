@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorite City & Team Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Your personalized dashboard</p>
+          <h1>City & Team Pulse</h1>
+          <p class="subtitle">
+            Stay updated with news and quick facts about your city and your
+            favorite team.
+          </p>
+        </div>
+        <button class="ghost" id="edit-preferences">Edit preferences</button>
+      </header>
+
+      <main class="grid">
+        <section class="card" aria-live="polite">
+          <div class="card-header">
+            <h2>City spotlight</h2>
+            <span id="city-name" class="pill">City</span>
+          </div>
+          <p id="city-fact" class="fact">Add your city to see a quick fact.</p>
+          <ul id="city-news" class="news-list"></ul>
+        </section>
+
+        <section class="card" aria-live="polite">
+          <div class="card-header">
+            <h2>Team highlights</h2>
+            <span id="team-name" class="pill">Team</span>
+          </div>
+          <p id="team-fact" class="fact">Add your team to see a quick fact.</p>
+          <ul id="team-news" class="news-list"></ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          News feeds are sourced from public Google News RSS results. Facts are
+          pulled from Wikipedia summaries.
+        </p>
+      </footer>
+    </div>
+
+    <div class="modal" id="setup-modal" role="dialog" aria-modal="true">
+      <div class="modal-card">
+        <h2>Tell us about you</h2>
+        <p>Answer two quick questions to personalize your dashboard.</p>
+        <form id="setup-form">
+          <label>
+            Where do you live?
+            <input type="text" name="city" placeholder="e.g. Chicago" required />
+          </label>
+          <label>
+            Which team do you support?
+            <input type="text" name="team" placeholder="e.g. Chicago Bulls" required />
+          </label>
+          <button type="submit" class="primary">Save & load updates</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
